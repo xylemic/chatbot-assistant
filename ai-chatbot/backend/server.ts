@@ -57,6 +57,9 @@ const saveChatHistory = (history: ChatMessage[]): void => {
 };
 
 
+let lastRequestTime
+
+
 app.post("/api/chat", async (req: Request<{}, {}, ChatRequestBody>, res: Response): Promise<void> => {
   const { message } = req.body;
 
